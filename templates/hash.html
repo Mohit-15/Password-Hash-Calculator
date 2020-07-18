@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Hash Calculator</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<center>
+		<div class="container-fluid">
+			<p></p><br>
+			<h1>Hello There!</h1>
+			<hr style="height:2px; border-width:0; color:gray; background-color:gray; width: 50%">
+			<h2>Calculated Hash Value of "<u>{{ pass }}</u>"</h2>
+			<h3> using, "<u>{{ algorithm }}</u>"</h3>
+						{% if hash %}
+						<hr style="height:2px; border-width:0; color:gray; background-color:gray; width: 50%">
+						<h4><b>HASH VALUE: <b></h4>    ( <u>{{ hash }}</u> )<br>
+						{% endif %}
+						{% if rounds %}
+						<hr style="height:2px; border-width:0; color:gray; background-color:gray; width: 50%">
+						<h4><b> NO. OF ITERATIONS: <b></h4>       ( <u>{{ rounds }}</u> )<br>
+						{% endif %}
+						{% if salt %}
+						<hr style="height:2px; border-width:0; color:gray; background-color:gray; width: 50%">
+						<h4><b> ADDED SALT: <b></h4>         ( <u>{{ salt }}</u> )<br>
+						{% endif %}
+						{% if sha %}
+						<hr style="height:2px; border-width:0; color:gray; background-color:gray; width: 50%">
+						<h4><b>CHECKSUM GENERATED: <b></h4>        ( <u>{{ sha }}</u> )<br>
+						{% endif %}
+		</div>
+	</center>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
